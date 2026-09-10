@@ -10,7 +10,7 @@
 **Step1:** create python virtual environment
 
 <code>
-python -m venv <name of the virtual environment>
+python -m venv \<name of the virtual environment>\
 
 </code>
 <code>python -m venv venv</code>
