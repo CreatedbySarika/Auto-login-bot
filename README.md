@@ -31,9 +31,14 @@ often times even after being inside venv the modules are install inside the glob
 
 <code>python -m pip show selenium </code>
 
-The out put location should **Location: C:\Users\hp\Documents\GitHub\Auto-login-bot\venv\Lib\site-packages**
+The out put location should 
 
-if the output is **AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages** then the module is installed in the global environment
+<code>Location: C:\Users\hp\Documents\GitHub\Auto-login-bot\venv\Lib\site-packages </code>
+
+if the output is 
+
+<code>AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages</code>/
+then the module is installed in the global environment
 
 
 
