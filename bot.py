@@ -1,3 +1,9 @@
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+#+           Python Module : Bot.py
+#+   Contains Function :
+#                     startBot - takes 3 parameter :-
+#+
+#+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 import os
