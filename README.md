@@ -39,23 +39,30 @@ Security Features
     Validate user identity before revealing sensitive information.
 ## Installation ##
 **clone the website**
-<code>git@github.com:CreatedbySarika/Auto-login-bot.git</code>
+```bash
+git@github.com:CreatedbySarika/Auto-login-bot.git
+```
 
 **navigate to the folder**\
-```<code>python run.py </code>```
+```bash
+python run.py 
+```
 
 ## Virtual environment ##
 
 ### How to setup the virtual environment inside the project? ###
 **create python virtual environment**\
 
-<code>python -m venv #name of the virtual environment#</code>\
-
-<code>python -m venv venv</code>
+<code>python -m venv #name of the virtual environment#</code>
+```bash
+python -m venv venv
+```
 
 **Activate the Virtual Environment**
 
-<code>.\venv\Scripts\activate</code>
+```bash
+.\venv\Scripts\activate 
+```
 
 ### How to Setup virtual Environment? ###
 
@@ -63,13 +70,17 @@ often times even after being inside venv the modules are install inside the glob
 
 <code>python -m pip install # module name # </code>
 
-<code>python -m pip install selenium </code>
+```bash
+python -m pip install selenium 
+```
 
 **verify install in venv**
 
 <code>python -m pip show #module name#</code>
 
-<code>python -m pip show selenium </code>
+```bash
+python -m pip show selenium 
+```
 
 The out put location should 
 
@@ -77,7 +88,9 @@ The out put location should
 
 if the output is 
 
-<code>AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages</code>
+```bash
+AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages
+```
 
 then the module is installed in the global environment
 
