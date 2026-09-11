@@ -53,7 +53,7 @@ clone the website
 
 <code>.\venv\Scripts\activate</code>
 
-### How to Download in virtual Environment? ###
+### How to Setup virtual Environment? ###
 
 often times even after being inside venv the modules are install inside the global environment.to make sure the modules are installed in venv
 
