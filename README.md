@@ -43,7 +43,7 @@ Security Features
 git@github.com:CreatedbySarika/Auto-login-bot.git
 ```
 
-**navigate to the folder**\
+**navigate to the folder**
 ```bash
 python run.py 
 ```
@@ -51,7 +51,7 @@ python run.py
 ## Virtual environment ##
 
 ### How to setup the virtual environment inside the project? ###
-**create python virtual environment**\
+**create python virtual environment**
 
 <code>python -m venv #name of the virtual environment#</code>
 ```bash
