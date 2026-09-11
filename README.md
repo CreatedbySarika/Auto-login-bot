@@ -38,7 +38,11 @@ Security Features
 **🔑 Secure Login Session :**
     Validate user identity before revealing sensitive information.
 ## Installation ##
-clone the website
+**clone the website**
+<code>git@github.com:CreatedbySarika/Auto-login-bot.git</code>
+
+**navigate to the folder**\
+<code>python run.py </code>
 
 ## Virtual environment ##
 
