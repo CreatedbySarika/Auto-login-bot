@@ -42,7 +42,7 @@ Security Features
 <code>git@github.com:CreatedbySarika/Auto-login-bot.git</code>
 
 **navigate to the folder**\
-<code>python run.py </code>
+```<code>python run.py </code>```
 
 ## Virtual environment ##
 
