@@ -17,3 +17,10 @@ match option:
         p = input("Enter password: ")
         db.create_user(u,p)
 
+save = input("would you like to save login Information y/n: ")
+if save == "y":
+    if option == 2:
+        print("You will have to login first")
+    else:
+        name = input("name this login information:")
+        db.save_login(user,pwd,url,name)
