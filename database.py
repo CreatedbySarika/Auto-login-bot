@@ -28,3 +28,12 @@ def check_user(user):
     else:
         print("User not found")
 
+def save_login(user,pwd,url,name):
+    cursor = mydb.cursor()
+    sql = "INSERT INTO saved_login values (u_login,u_pass,u_url,sl_name) values (user,pwd,url,name)"
+
+    cursor.execute(sql)
+
+    print("%s data added successfully!",name)
+    
+
