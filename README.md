@@ -43,7 +43,7 @@ Security Features
 git@github.com:CreatedbySarika/Auto-login-bot.git
 ```
 
-**navigate to the folder**
+**navigate to the folder and run:-**
 ```bash
 python run.py 
 ```
