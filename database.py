@@ -14,6 +14,7 @@ def create_user(user,pwd):
 
     cursor.execute(sql,val)
     mydb.commit()
+    print("User sucessfully created!")
 
 def check_user(user):
     cursor = mydb.cursor()
