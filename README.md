@@ -3,9 +3,56 @@
 
 ## Features ##
 
-## Installation ##
+Core Features
 
-### Virtual environment ###
+🔐 User Authentication
+
+Create an account and log in to the application.
+Securely manage personal data.
+
+💾 Credential Storage
+
+Save website URLs, usernames, and passwords.
+Store multiple accounts per user.
+
+🚀 Automatic Login
+
+Automatically fills login forms using Selenium.
+Submits credentials with a single click.
+
+🌐 Multi-Website Support
+
+Store credentials for different websites.
+Manage all saved logins from one dashboard.
+
+🔍 Credential Search
+
+Search saved accounts by website name or URL.
+
+✏️ Edit Saved Logins
+
+Update usernames, passwords, or URLs.
+
+🗑️ Delete Saved Logins
+
+Remove outdated or unused login entries.
+Security Features
+
+🔒 Password Encryption
+
+Encrypt passwords before storing them in the database.
+
+👤 User Isolation
+
+Users can only access their own saved credentials.
+
+🔑 Secure Login Session
+
+Validate user identity before revealing sensitive information.
+## Installation ##
+clone the website
+
+## Virtual environment ##
 
 ### How to setup the virtual environment inside the project? ###
 **create python virtual environment**\
