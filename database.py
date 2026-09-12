@@ -6,7 +6,7 @@ mydb = mysql.connector.connect(
     password = "MySQL@root26",
     database = "loginBot"
 )
-
+#adding user into the database
 def create_user(user,pwd):
     cursor = mydb.cursor()
     sql = "INSERT INTO user_info(u_name,u_pwd) VALUES (%s, %s)"
@@ -33,7 +33,35 @@ def save_login(user,pwd,url,name):
     sql = "INSERT INTO saved_login values (u_login,u_pass,u_url,sl_name) values (user,pwd,url,name)"
 
     cursor.execute(sql)
+    mydb.commit()
 
     print("%s data added successfully!",name)
-    
 
+def modify_login_pass(name):
+    cursor = mydb.cursor()
+    sql = "DELETE FROM saved_login where sl_name = %s " 
+
+    cursor.execute(sql,name)
+    mydb.commit()
+
+
+def update_login_pass(name,pwd):
+    cursor = mydb.cursor()
+    sql = "UPDATE saved_logib SET u_pass = %s where sl_name = %s"
+    val = (pwd,name)
+    cursor.execute(sql,val)
+    mydb.commit()
+    print("data updated sucessfully!")
+
+def print_login(user):
+    cursor = mydb.cursor()
+    sql = "SELECT * from saved_login where uid = %s"
+    val = user
+    cursor.execute(sql,val)
+    results = cursor.fetchall()
+
+    if results:
+        for login in results:
+            print(login)
+    else:
+        print("No saved logins found.")

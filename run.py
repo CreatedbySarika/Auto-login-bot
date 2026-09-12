@@ -1,7 +1,11 @@
 import bot
 import database as db
+import icons
+
+icons.intro()
 
 option = int(input("Welcome to the the login bot press the following number:-\n[1]login\n[2]guest user\n[3]Create User\n"))
+
 
 match option:
     case 1:
@@ -24,3 +28,10 @@ if save == "y":
     else:
         name = input("name this login information:")
         db.save_login(user,pwd,url,name)
+        see = input("would you like to see your saved logins y/n")
+        if see == "y":
+            db.print_login(us)
+        else:
+            print("Thank you")
+
+
