@@ -1,4 +1,5 @@
 from colorama import Fore, Back, Style
+import time
 
 def intro():
     print(Fore.RED+'''
@@ -13,6 +14,14 @@ def intro():
 =================================================================
 '''+Fore.BLACK)
 
-#def thinking(num):
+def thinking(num):
+    x=num
+    while x != 0:
+        print(Fore.MAGENTA+"=",end=" ")
+        time.sleep(0.2)
+        x = x-1
+    print(">"+Fore.BLACK)
+    time.sleep(0.3)
+    #print("Done !")
 
-
+thinking(6)
