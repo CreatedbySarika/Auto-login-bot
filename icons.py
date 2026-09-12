@@ -17,11 +17,27 @@ def intro():
 def thinking(num):
     x=num
     while x != 0:
-        print(Fore.MAGENTA+"=",end=" ")
+        print(Fore.MAGENTA+"==",end=" ")
         time.sleep(0.2)
         x = x-1
     print(">"+Fore.BLACK)
     time.sleep(0.3)
     #print("Done !")
 
-thinking(6)
+thinking(3)
+
+def star():
+    print(Fore.YELLOW+
+        '''
+        
+    ____/\___
+    \        /
+    /__    __\
+        \/
+
+    '''+Fore.BLACK
+         )
+
+
+
+    
