@@ -42,7 +42,10 @@ Security Features
 ```bash
 git@github.com:CreatedbySarika/Auto-login-bot.git
 ```
-
+**Activate venv**
+```bash
+.\venv\Scripts\activate 
+```
 **navigate to the folder and run:-**
 ```bash
 python run.py 
