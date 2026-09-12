@@ -1,5 +1,5 @@
 # AUTO LOGIN BOT #
-
+Auto Login Bot is a Python automation tool built with Selenium that automatically logs users into websites by filling in credentials and submitting login forms. The bot reduces repetitive manual login tasks and provides a simple way to automate authentication workflows.
 
 ## Features ##
 
@@ -93,6 +93,9 @@ AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalC
 ```
 
 then the module is installed in the global environment
+
+## References ##
+<https://www.geeksforgeeks.org/python/how-to-build-a-simple-auto-login-bot-with-python/>
 
 
 
