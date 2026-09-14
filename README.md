@@ -50,6 +50,12 @@ git@github.com:CreatedbySarika/Auto-login-bot.git
 ```bash
 python run.py 
 ```
+## Skills ##
+1.Python Module Selenium\
+2.MySQL Database\
+3.User Authentication\
+4.Login Automation
+
 
 ## Virtual environment ##
 
