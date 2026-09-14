@@ -17,16 +17,32 @@ def create_user(user,pwd):
     print("User sucessfully created!")
 
 def check_user(user):
-    cursor = mydb.cursor()
+    cursor = mydb.cursor(buffered=True)
     sql = "SELECT* from user_info where u_name = %s"
 
-    cursor.execute(sql,user)
-    useri = cursor.fetchone()
+    cursor.execute(sql,(user,))
+    db_info = cursor.fetchone()
 
-    if useri:
-        print("User exists ",user)
-    else:
+    if db_info is None:
         print("User not found")
+        return False
+    else:
+        print("User exists ",user)
+        return True
+   
+
+def check_password(username,password):
+    cursor = mydb.cursor()
+    sql = "SELECT* from user_info where u_name= %s"
+
+    cursor.execute(sql,(username,))   
+    dbinfo = cursor.fetchone()
+
+    db_pwd = dbinfo[2]
+    if db_pwd == password:       
+        return True
+    else:       
+        return False
 
 def save_login(user,pwd,url,name):
     cursor = mydb.cursor()
