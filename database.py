@@ -1,11 +1,22 @@
+#FUNCTIONS:
+#       check_user(user)
+#       create_user(user,pwd)
+#       check_password(username,password)
+#       save_login(user,pwd,url,name):
+#       modify_login_pass(name)
+#       update_login_pass(name,pwd)
+#       print_login(user)
+
 import mysql.connector
 
+#Establishing the connection between python and MYSQL workbench
 mydb = mysql.connector.connect(
     host = "localhost",
     user = "root",
     password = "MySQL@root26",
     database = "loginBot"
 )
+# Checks user in the database - TESTED
 def check_user(user):
     cursor = mydb.cursor(buffered=True)
     sql = "SELECT* from user_info where u_name = %s"
@@ -20,12 +31,14 @@ def check_user(user):
         #print("User exists ",user)
         return True
 #adding user into the database
+##################
+# TO BE FIXED 
+##################
+# it does not checks wheter the the user is already there or not
 def create_user(user,pwd):
     cursor = mydb.cursor()
     sql = "INSERT INTO user_info(u_name,u_pwd) VALUES (%s, %s)"
-    val = (user,pwd)
-
-    
+    val = (user,pwd)    
 
     cursor.execute(sql,val)
     
@@ -36,8 +49,7 @@ def create_user(user,pwd):
         print("User sucessfully created!")
 
 
-   
-
+# Checks password in the database Tested
 def check_password(username,password):
     cursor = mydb.cursor()
     sql = "SELECT* from user_info where u_name= %s"
