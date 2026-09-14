@@ -1,16 +1,24 @@
 import bot
 import database as db
-import icons
+import icons as i
+import files
 
-icons.intro()
+i.intro()
+print("Welcome to Auto-login bot")
 
-option = int(input("Welcome to the the login bot press the following number:-\n[1]login\n[2]guest user\n[3]Create User\n"))
-
+option = input(files.read_files("options\\Menu1.txt"))
 
 match option:
     case 1:
-        us = input("Enter you username")
-        db.check_user(us)
+        username = input("Enter Username: ")
+        attempt = 1
+        while(db.check_user(username) == False) and attempt<4:
+            username = input("Enter Username: ")
+            attempt = attempt+1
+
+        else:
+            password = input("Enter Password: ")
+            
     case 2:
         user = input("Enter the Username: ")
         pwd = input("Enter the password:")

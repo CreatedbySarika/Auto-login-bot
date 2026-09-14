@@ -6,16 +6,6 @@ mydb = mysql.connector.connect(
     password = "MySQL@root26",
     database = "loginBot"
 )
-#adding user into the database
-def create_user(user,pwd):
-    cursor = mydb.cursor()
-    sql = "INSERT INTO user_info(u_name,u_pwd) VALUES (%s, %s)"
-    val = (user,pwd)
-
-    cursor.execute(sql,val)
-    mydb.commit()
-    print("User sucessfully created!")
-
 def check_user(user):
     cursor = mydb.cursor(buffered=True)
     sql = "SELECT* from user_info where u_name = %s"
@@ -27,8 +17,25 @@ def check_user(user):
         print("User not found")
         return False
     else:
-        print("User exists ",user)
+        #print("User exists ",user)
         return True
+#adding user into the database
+def create_user(user,pwd):
+    cursor = mydb.cursor()
+    sql = "INSERT INTO user_info(u_name,u_pwd) VALUES (%s, %s)"
+    val = (user,pwd)
+
+    
+
+    cursor.execute(sql,val)
+    
+    if (check_user(user)==True):
+        print("User already exists")
+    else:
+        mydb.commit()
+        print("User sucessfully created!")
+
+
    
 
 def check_password(username,password):
@@ -46,9 +53,10 @@ def check_password(username,password):
 
 def save_login(user,pwd,url,name):
     cursor = mydb.cursor()
-    sql = "INSERT INTO saved_login values (u_login,u_pass,u_url,sl_name) values (user,pwd,url,name)"
+    sql = "INSERT INTO saved_login (u_login,u_pass,u_url,sl_name) values (%s, %s, %s, %s)"
+    val = (user,pwd,url,name)
 
-    cursor.execute(sql)
+    cursor.execute(sql,val)
     mydb.commit()
 
     print("%s data added successfully!",name)
