@@ -68,12 +68,19 @@ def save_login(user,pwd,url,name):
     sql = "INSERT INTO saved_login (u_login,u_pass,u_url,sl_name) values (%s, %s, %s, %s)"
     val = (user,pwd,url,name)
 
-    cursor.execute(sql,val)
+    cursor.execute(sql,(val,))
     mydb.commit()
 
     print("%s data added successfully!",name)
 
-def modify_login_pass(name):
+def delete_user(user):
+    cursor = mydb.cursor()
+    sql = "DELETE FROM user_info where u_name = %s"
+    cursor.execute(sql,(user,))
+    mydb.commit()
+    print("Data Removed successfully!")
+
+def delete_url_login(name):
     cursor = mydb.cursor()
     sql = "DELETE FROM saved_login where sl_name = %s " 
 
