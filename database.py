@@ -31,22 +31,21 @@ def check_user(user):
         #print("User exists ",user)
         return True
 #adding user into the database
-##################
-# TO BE FIXED 
-##################
-# it does not checks wheter the the user is already there or not
+
 def create_user(user,pwd):
+    #use check function before creating the user
+    if check_user(user):
+        print("User already exists")
+        return
+
     cursor = mydb.cursor()
     sql = "INSERT INTO user_info(u_name,u_pwd) VALUES (%s, %s)"
     val = (user,pwd)    
 
     cursor.execute(sql,val)
     
-    if (check_user(user)==True):
-        print("User already exists")
-    else:
-        mydb.commit()
-        print("User sucessfully created!")
+    mydb.commit()
+    print("User sucessfully created!")
 
 
 # Checks password in the database Tested
