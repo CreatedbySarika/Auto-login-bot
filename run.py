@@ -2,22 +2,35 @@ import bot
 import database as db
 import icons as i
 import files
+import time
+from colorama import Fore, Back, Style
 
 i.intro()
 print("Welcome to Auto-login bot")
 
-option = input(files.read_files("options\\Menu1.txt"))
+files.read_files("options\\Menu1.txt")
+option = int(input("Enter your choice : "))
 
 match option:
     case 1:
-        username = input("Enter Username: ")
+        print("You have chosen option 1- Login\n Welcome ")
+        username = input("Enter your Username : ")
+        db.check_user(username)
         attempt = 1
-        while(db.check_user(username) == False) and attempt<4:
-            username = input("Enter Username: ")
-            attempt = attempt+1
+        while(db.check_user(username) == False):
+            if attempt>3:
+                print("You obviously dont remember you username !\n")
+                break
+            #while (attempt != 4):
+            print(Fore.RED+"Incorrect Username please Try Again"+Style.RESET_ALL)
+            time.sleep(0.2)
+            username = input("Enter Your Username : ")
+            attempt = attempt+1            
 
-        else:
-            password = input("Enter Password: ")
+    #    password = input("Enter Password: ")
+    #   db.check_password(password)
+
+        
             
     case 2:
         user = input("Enter the Username: ")

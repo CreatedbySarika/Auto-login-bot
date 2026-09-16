@@ -24,7 +24,6 @@ def thinking(num):
     time.sleep(0.3)
     #print("Done !")
 
-thinking(3)
 
 def star():
     print(Fore.YELLOW+

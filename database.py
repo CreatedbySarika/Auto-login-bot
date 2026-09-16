@@ -25,7 +25,7 @@ def check_user(user):
     db_info = cursor.fetchone()
 
     if db_info is None:
-        print("User not found")
+        #print("User not found")
         return False
     else:
         #print("User exists ",user)
