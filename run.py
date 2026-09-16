@@ -25,10 +25,20 @@ match option:
             print(Fore.RED+"Incorrect Username please Try Again"+Style.RESET_ALL)
             time.sleep(0.2)
             username = input("Enter Your Username : ")
-            attempt = attempt+1            
-
-    #    password = input("Enter Password: ")
-    #   db.check_password(password)
+            attempt = attempt+1 
+        if(db.check_user(username)== True):
+            password = input("Enter Password: ")
+            Pass_attempts = 1
+            while(db.check_password(username,password)== False):
+               if Pass_attempts>3:
+                print("Are you Trying to Bruteforce!\n")
+                break
+            #while (attempt != 4):
+            print(Fore.RED+"Incorrect Username please Try Again"+Style.RESET_ALL)
+            time.sleep(0.2)
+            Password = input("Enter Your Password: ")
+            Pass_attempts = Pass_attempts+1          
+            
 
         
             
