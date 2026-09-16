@@ -28,16 +28,23 @@ match option:
             attempt = attempt+1 
         if(db.check_user(username)== True):
             password = input("Enter Password: ")
-            Pass_attempts = 1
-            while(db.check_password(username,password)== False):
-               if Pass_attempts>3:
-                print("Are you Trying to Bruteforce!\n")
-                break
-            #while (attempt != 4):
-            print(Fore.RED+"Incorrect Username please Try Again"+Style.RESET_ALL)
-            time.sleep(0.2)
-            Password = input("Enter Your Password: ")
-            Pass_attempts = Pass_attempts+1          
+            if(db.check_password(username,password)):
+                print("yayy")
+            else:
+
+
+                Pass_attempts = 1
+                while(db.check_password(username,password) == False):
+                    if Pass_attempts > 3:
+                        print("Are you Trying to Bruteforce!\n")
+                        break
+                
+                print(Fore.RED+"Incorrect Username please Try Again"+Style.RESET_ALL)
+                time.sleep(0.2)
+                Password = input("Enter Your Password: ")
+                Pass_attempts = Pass_attempts+1  
+
+        print("Welcome "+ username)        
             
 
         
@@ -52,6 +59,7 @@ match option:
         p = input("Enter password: ")
         db.create_user(u,p)
 
+"""
 save = input("would you like to save login Information y/n: ")
 if save == "y":
     if option == 2:
@@ -66,3 +74,4 @@ if save == "y":
             print("Thank you")
 
 
+"""
